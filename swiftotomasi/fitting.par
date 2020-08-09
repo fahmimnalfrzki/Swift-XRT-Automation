@@ -1,5 +1,0 @@
-# XSPEC spectra fitting parameter input file
-
-#MODEL
-#Model_name	mul/add	[par_InitialValue_freeze/not]	
-TBabs	mul	
