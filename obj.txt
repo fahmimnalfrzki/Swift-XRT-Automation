@@ -1,0 +1,11 @@
+# DIREKTORI:
+/home/astro-02/Documents/ULX/
+##
+## Jika daftar nama objek ingin dijadikan sebagai sebuah komen, maka sebelum tanda bintang ditambahkan tanda pagar '#' dan spasi
+##
+# DAFTAR NAMA OBJEK (FORMAT: *NAMA_OBJ* NAMA_FOLDER):
+# 
+# *Holmberg IX X-1* HolmbergIXX-1
+# *Holmberg II X-1* HolmbergIIX-1
+# *NGC 1313 X-2* NGC1313X-2
+*[SST2011] J034555.61+680455.3* IC342X-1
