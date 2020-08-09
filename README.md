@@ -16,22 +16,33 @@ obj.txt file consists list of object that want to be studied and swiftotomasi fo
 
 In swiftotomasi folder there are python files which are:
 Main Scripts:
-- main.py
+- main.py |
 This script wraps other main scripts. In general, this script will call calb.py,extrct.py,calb.py,and reduc.py. Before running those scripts, main.py will read obj.txt and find coordinate of the objects that listed on obj.txt using Astropy package automatically on Vizier, but if the source cannot be found on Vizier and other astronomical catalog, you can provide the coordinate on obj.txt.
 
-- calb.py
-This script is used to perform data calibration using Xrtpipeline task on Heasoft 6.26.1. The output will be po_cl.evt file and it is copied to each obsid folder.
-- extrct.py
-This script performs image and spectra extraction using 
-- calb.py
-- reduc.py
-- function.py
+- calb.py |
+This script is used to perform data calibration using Xrtpipeline task on Heasoft 6.26.1. The output will be po_cl.evt file and it is copied to each obsid event folder.
+- extrct.py |
+This script performs image and spectra (source and background) extraction using xselect task.
+- reduc.py |
+This script performs spectra reduction. The reduction includes expomap creation, arf file creation, and group the spectra and other reduction files. Also, this script copies the rmf file from CALDB to each obsid event folder.
+- function.py |
+This script performs region files creation, and define the Heasoft file caller.
+
 
 Additional Scripts:
-- object.py
-- HR_ULX.py
-- fakeitswift.py
-- xspec_fit.py
-- xcm_ambildata.py
-- datproc.py
+- object.py |
+This script is used to make obj.txt
+- xspec_fit.py |
+This script performs spectral fitting using Xspec. The output is .xcm file of each obsid
+- xcm_ambildata.py |
+This script catches spectral fitting parameters from .xcm file and store them into an Excel file including fitting model parameters and their error, reduced Chi-squared value, count rate value and its error, flux values and their error.
+- HR_ULX.py |
+This script is used for extract hardness ration parameters of ULX from .xcm file
+- fakeitswift.py |
+This script extracts hard color and soft color values for building a color-color diagram model.
+- datproc.py |
+This script plots color-color diagram model based on the output of fakeitswift.py
+
+**Disclaimer**
+This automation scripts are still under improvement. However, you can use it for your project that the same purpose. If you want to use it or ask further information about the scripts, you can contact me on email: fahmimn21@gmail.com. Any suggestion and critics are welcome!
 
